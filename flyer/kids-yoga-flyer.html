@@ -15,7 +15,11 @@
     --ink:#2B2B2B;
   }
 
-  *{box-sizing:border-box;}
+  *{
+    box-sizing:border-box;
+    -webkit-print-color-adjust:exact;
+    print-color-adjust:exact;
+  }
 
   body{
     margin:0;
@@ -130,6 +134,45 @@
     font-size:22px;
     color:var(--ink);
     line-height:1.5;
+  }
+
+  /* Print / Save as PDF: keep colors, one page, no browser margins */
+  @page{
+    size:5.5in 8in;
+    margin:0;
+  }
+  @media print{
+    html,body{
+      width:5.5in;
+      height:8in;
+      margin:0;
+      padding:0;
+      background:var(--cream);
+    }
+    body{
+      display:block;
+    }
+    .flyer{
+      width:5.5in;
+      min-height:8in;
+      height:8in;
+      padding:32px 40px 24px;
+      border-radius:0;
+      overflow:visible;
+    }
+    .art-area{
+      height:250px;
+      margin-top:0;
+    }
+    .footer{
+      margin-top:12px;
+    }
+    .title-bubble h1{
+      font-size:42px;
+    }
+    .pill{
+      font-size:20px;
+    }
   }
 </style>
 </head>

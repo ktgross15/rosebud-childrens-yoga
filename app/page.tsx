@@ -26,7 +26,7 @@ export default function Home() {
       </p>
       <p className="reveal reveal-delay-2 mt-3 max-w-md px-1 text-lg leading-relaxed text-ink/75">
         Gentle, playful yoga for {AGES.toLowerCase()} at Pacific Park in
-        Brooklyn. First-timers are welcome — just bring comfy clothes and a
+        Brooklyn. First-timers are welcome! Just bring comfy clothes and a
         grown-up.
       </p>
 
