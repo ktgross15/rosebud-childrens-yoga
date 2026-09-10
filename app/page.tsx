@@ -12,8 +12,8 @@ export default function Home() {
     <div className="relative flex min-w-0 flex-1 flex-col items-center pb-6 pt-8 text-center">
       <DotGrid className="top-2 left-0 opacity-80" />
       <DotGrid className="right-0 bottom-24 hidden opacity-80 sm:grid" />
-      <Wave className="pointer-events-none absolute bottom-28 left-0 hidden w-40 text-purple sm:block" />
-      <Wave className="pointer-events-none absolute top-40 right-0 hidden w-40 text-purple sm:block" />
+      <Wave className="pointer-events-none absolute bottom-28 left-0 z-10 hidden w-40 text-purple sm:block" />
+      <Wave className="pointer-events-none absolute top-40 right-0 z-10 hidden w-40 text-purple sm:block" />
 
       <div className="title-blob reveal">
         <h1 className="max-w-[16rem] font-display text-[1.65rem] font-extrabold leading-[1.05] tracking-wide text-balance sm:max-w-none sm:text-5xl sm:leading-none">
@@ -30,7 +30,7 @@ export default function Home() {
         grown-up.
       </p>
 
-      <div className="hero-art reveal reveal-delay-3 relative -mt-2 w-full max-w-xl">
+          <div className="hero-art reveal reveal-delay-3 relative z-0 -mt-2 w-full max-w-xl">
         <Image
           src="/kids-yoga-illustration.png"
           alt="A child sitting cross-legged on a yoga mat outdoors, hands in namaste"

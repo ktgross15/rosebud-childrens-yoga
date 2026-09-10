@@ -18,7 +18,7 @@ export const classes: YogaClass[] = [
     time: "10:30–11am",
     ages: "Ages 2–5",
     location: "Pacific Park",
-    address: "645 Dean St, Brooklyn, NY",
+    address: "615 Dean St, Brooklyn, NY",
   },
   {
     id: "2026-09-26",
@@ -28,7 +28,7 @@ export const classes: YogaClass[] = [
     time: "10:30–11am",
     ages: "Ages 2–5",
     location: "Pacific Park",
-    address: "645 Dean St, Brooklyn, NY",
+    address: "615 Dean St, Brooklyn, NY",
   },
 ];
 

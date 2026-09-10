@@ -52,15 +52,42 @@
     width:10px;height:10px;border-radius:50%;
     background:var(--dot-green);
   }
-  .dots.top-left{top:30px;left:30px;}
+  .dots.top-left{top:118px;left:26px;}
   .dots.bottom-right{bottom:30px;right:30px;}
+
+  /* brand lockup: mark + wordmark, mirrors the site header.
+     negative margins pull it out of .flyer's padding so it lines up
+     with the dot grid's left edge and hugs the top-left corner */
+  .brand{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    text-align:left;
+    margin:-18px 0 0 -33px;
+  }
+  .brand-mark{
+    width:34px;
+    height:36px;
+    flex:none;
+  }
+  /* deliberately lighter than the purple title so it reads as a signature, not a headline */
+  .brand-name{
+    font-family:'Baloo 2', sans-serif;
+    font-weight:600;
+    font-size:20px;
+    letter-spacing:0.3px;
+    color:rgba(43,43,43,0.78);
+  }
 
   /* wavy line accents */
   .wave{
     position:absolute;
     height:60px;
   }
-  .wave.bottom-left{bottom:36px; left:0; width:180px; z-index:1;}
+  /* squiggles sit on the same inset as the dot grids so nothing runs off the edge */
+  .wave.bottom-left{bottom:34px; left:22px; width:180px; z-index:1;}
+  /* accent tucked into the art's top-right corner, like the website */
+  .wave.art-top-right{top:4px; right:2px; width:160px; height:48px; z-index:1;}
 
   .content{
     position:relative;
@@ -73,59 +100,74 @@
     background:var(--purple);
     color:white;
     display:inline-block;
-    padding:22px 45px;
+    max-width:100%;
+    padding:24px 44px;
     border-radius:60% 40% 55% 45% / 55% 45% 55% 45%;
-    margin:10px auto 0;
+    margin:16px auto 0;
+    box-shadow:8px 10px 0 rgba(79,122,86,0.12);
   }
   .title-bubble h1{
     margin:0;
     font-family:'Baloo 2', sans-serif;
     font-weight:800;
-    font-size:52px;
-    letter-spacing:1px;
+    font-size:42px;
+    letter-spacing:0.5px;
     white-space:nowrap;
   }
 
-  /* ===== EDIT ME: green info pills ===== */
+  /* ===== EDIT ME: body copy (mirrors the site) ===== */
+  .lede{
+    font-size:17px;
+    line-height:1.55;
+    color:rgba(43,43,43,0.75);
+    max-width:470px;
+    margin:18px auto 0;
+  }
+
+  /* ===== EDIT ME: when & where ===== */
+  .when{
+    font-family:'Baloo 2', sans-serif;
+    font-weight:700;
+    font-size:22px;
+    line-height:1.3;
+    color:var(--ink);
+    margin:16px auto 0;
+  }
+  .where{
+    font-size:16px;
+    line-height:1.4;
+    color:rgba(43,43,43,0.75);
+    margin:8px auto 0;
+  }
+
+  /* ===== EDIT ME: green info pill (the "Ages 2-5" badge under the title) ===== */
   .pill{
     background:var(--green);
     color:white;
     font-family:'Baloo 2', sans-serif;
-    font-weight:600;
-    font-size:24px;
-    text-align:center;
-    line-height:1.3;
-    border-radius:22px;
-    padding:16px 30px;
-    display:inline-block;
-    margin:14px auto 0;
-  }
-
-  /* suggested donation: secondary to the solid pills above, so it's outlined not filled */
-  .donation-note{
-    display:inline-block;
-    margin:16px auto 0;
-    padding:8px 22px;
-    border:2px solid var(--green);
-    border-radius:999px;
-    color:var(--green-dark);
-    font-family:'Baloo 2', sans-serif;
     font-weight:700;
     font-size:18px;
+    text-align:center;
+    line-height:1.3;
+    border-radius:999px;
+    padding:7px 18px;
+    display:inline-block;
+    margin:18px auto 0;
   }
 
-  .free-lesson{
-    font-family:'Baloo 2', sans-serif;
-    font-weight:700;
-    font-size:24px;
-    color:var(--ink);
-    text-align:right;
-    margin:40px 40px 0 0;
+  /* suggested donation: a quiet footnote, not a competing badge */
+  .donation-note{
+    margin:10px auto 0;
+    font-size:15px;
+    color:rgba(43,43,43,0.6);
   }
 
+  /* the art is 1.67:1 and tightly cropped, so the box height tracks that ratio
+     (a taller box just letterboxes it); slight side bleed gives the art more room */
   .art-area{
-    margin:14px 0 4px;
-    height:360px;
+    position:relative;
+    margin:14px -30px 4px;
+    height:419px;
     display:flex;
     align-items:flex-start;
     justify-content:center;
@@ -149,6 +191,9 @@
     line-height:1.5;
     position:relative;
     z-index:2;
+  }
+  .footer .phone{
+    color:var(--purple);
   }
 
   /* Print / Save as PDF: keep colors, one page, no browser margins */
@@ -176,26 +221,62 @@
       overflow:visible;
     }
     .wave.bottom-left{
-      bottom:20px;
+      bottom:24px;
+      left:20px;
       width:150px;
     }
+    /* the blob is proportionally wider in print, so keep the dots narrow enough to clear it */
+    .dots.top-left{top:98px; left:22px; grid-template-columns:repeat(3,14px);}
+    .brand{
+      margin:-10px 0 0 -18px;
+    }
+    .brand-mark{
+      width:26px;
+      height:26px;
+    }
+    .brand-name{
+      font-size:15px;
+    }
     .art-area{
-      height:230px;
-      margin:8px 0 2px;
+      height:287px;
+      margin:10px -16px 2px;
+    }
+    .wave.art-top-right{
+      width:124px;
+      height:38px;
     }
     .footer{
-      margin-top:14px;
+      margin-top:26px;
+      font-size:18px;
+    }
+    .title-bubble{
+      padding:16px 32px;
+      margin:12px auto 0;
     }
     .title-bubble h1{
-      font-size:42px;
+      font-size:32px;
+    }
+    .lede{
+      font-size:13.5px;
+      max-width:400px;
+      margin:14px auto 0;
+    }
+    .when{
+      font-size:16px;
+      margin:20px auto 0;
+    }
+    .where{
+      font-size:12.5px;
+      margin:6px auto 0;
     }
     .pill{
-      font-size:20px;
+      font-size:14px;
+      padding:5px 14px;
+      margin:14px auto 0;
     }
     .donation-note{
-      margin:10px auto 0;
-      padding:6px 18px;
-      font-size:16px;
+      margin:8px auto 0;
+      font-size:12px;
     }
   }
 </style>
@@ -222,32 +303,51 @@
   </svg>
 
   <div class="content">
+    <!-- brand lockup -->
+    <div class="brand">
+      <svg class="brand-mark" viewBox="6 7 36 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <ellipse cx="16" cy="34" rx="7" ry="10" fill="#8FB88A" transform="rotate(-28 16 34)"/>
+        <ellipse cx="30" cy="35" rx="6.5" ry="9" fill="#4F7A56" transform="rotate(24 30 35)"/>
+        <circle cx="24" cy="20" r="11" fill="#E07A7A"/>
+        <circle cx="18" cy="18" r="7.5" fill="#F09999"/>
+        <circle cx="26" cy="15" r="6" fill="#D45D5D"/>
+        <circle cx="24" cy="21" r="3.2" fill="#FBF0E8"/>
+      </svg>
+      <span class="brand-name">Rosebud Children&rsquo;s Yoga</span>
+    </div>
+
     <!-- EDIT: class name -->
     <div class="title-bubble">
-      <h1>KIDS YOGA</h1>
+      <h1>Yoga in the Park</h1>
     </div>
 
-    <div>
-      <!-- level -->
-      <div class="pill">Ages 2&ndash;5</div>
-    </div>
-    <div>
-      <!-- schedule -->
-      <div class="pill">Saturdays, Sept 19 &amp; 26 · 10:30–11am<br>Pacific Park<br>645 Dean St, Brooklyn, NY</div>
-    </div>
+    <!-- EDIT: who it's for -->
+    <div><span class="pill">Ages 2&ndash;5</span></div>
 
-    <!-- suggested donation -->
-    <div class="donation-note">Suggested donation: $10&ndash;$20</div>
+    <!-- EDIT: description -->
+    <p class="lede">First-timers welcome!<br>Just bring comfy clothes and a towel or mat.</p>
 
     <div class="art-area">
+      <!-- wavy accent over the art, like the website -->
+      <svg class="wave art-top-right" viewBox="-6 -6 232 72" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0 30 C 20 0, 40 60, 60 30 S 100 0, 120 30 S 160 60, 180 30 S 210 0, 220 30" stroke="#7C6FE0" stroke-width="10" fill="none" stroke-linecap="round"/>
+      </svg>
       <img src="kids-yoga-illustration.png" alt="A child sitting cross-legged on a yoga mat outdoors">
     </div>
 
+    <!-- EDIT: dates & time -->
+    <p class="when">Saturdays, Sept 19 &amp; 26 &middot; 10:30&ndash;11am</p>
+
+    <!-- EDIT: location -->
+    <p class="where">Pacific Park &middot; 615 Dean St, Brooklyn, NY</p>
+
+    <!-- suggested donation -->
+    <p class="donation-note">Suggested donation $10&ndash;$20</p>
+
     <!-- contact info -->
     <div class="footer">
-      To sign up:<br>
-      Contact Katie Gross at<br>
-      203-247-8217
+      To sign up, text Katie Gross at<br>
+      <span class="phone">203-247-8217</span>
     </div>
   </div>
 

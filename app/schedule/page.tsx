@@ -22,7 +22,7 @@ export default function SchedulePage() {
         Schedule
       </h1>
       <p className="reveal reveal-delay-1 mt-3 max-w-lg text-lg leading-relaxed text-pretty text-ink/75">
-        Outdoor classes on Saturday mornings. Same cozy 45-minute class, two
+        Outdoor classes on Saturday mornings. Same cozy 30-minute class, two
         dates to choose from.
       </p>
 

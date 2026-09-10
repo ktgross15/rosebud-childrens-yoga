@@ -1,5 +1,5 @@
 import type { YogaClass } from "@/lib/classes";
-import { MAPS_HREF, PHONE_HREF } from "@/lib/site";
+import { MAPS_HREF, SMS_HREF } from "@/lib/site";
 
 export function ClassCard({ yogaClass }: { yogaClass: YogaClass }) {
   return (
@@ -28,10 +28,10 @@ export function ClassCard({ yogaClass }: { yogaClass: YogaClass }) {
         </a>
       </p>
       <a
-        href={PHONE_HREF}
+        href={SMS_HREF}
         className="mt-6 inline-flex rounded-full bg-purple px-5 py-2.5 font-display text-lg font-bold text-white no-underline transition-transform duration-200 hover:-translate-y-0.5"
       >
-        Call to join
+        Text to join
       </a>
     </article>
   );
