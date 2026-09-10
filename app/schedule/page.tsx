@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { ClassCard } from "@/components/class-card";
 import { DotGrid } from "@/components/dot-grid";
-import { Wave } from "@/components/wave";
 import { getUpcomingClasses } from "@/lib/classes";
 
 export const metadata: Metadata = {
@@ -16,7 +15,6 @@ export default function SchedulePage() {
   return (
     <div className="relative flex min-w-0 flex-1 flex-col pb-8 pt-8">
       <DotGrid className="top-0 right-2 hidden opacity-80 sm:grid" />
-      <Wave className="pointer-events-none absolute bottom-8 left-0 hidden w-44 text-purple sm:block" />
 
       <h1 className="reveal font-display text-4xl font-extrabold text-ink sm:text-5xl">
         Schedule
