@@ -3,7 +3,7 @@ import Link from "next/link";
 import { DotGrid } from "@/components/dot-grid";
 import { Wave } from "@/components/wave";
 import { getNextClass } from "@/lib/classes";
-import { AGES, PHONE_HREF, SITE_NAME } from "@/lib/site";
+import { AGES } from "@/lib/site";
 
 export default function Home() {
   const nextClass = getNextClass();
@@ -17,7 +17,7 @@ export default function Home() {
 
       <div className="title-blob reveal">
         <h1 className="max-w-[16rem] font-display text-[1.65rem] font-extrabold leading-[1.05] tracking-wide text-balance sm:max-w-none sm:text-5xl sm:leading-none">
-          {SITE_NAME}
+          Yoga in the Park
         </h1>
       </div>
 
@@ -51,19 +51,13 @@ export default function Home() {
             <span className="pill">{nextClass.ages}</span>
             <span className="pill">{nextClass.location}</span>
           </div>
-          <div className="mt-2 flex w-full flex-col items-center gap-3 sm:flex-row sm:justify-center">
+          <div className="mt-2 flex w-full justify-center">
             <Link
               href="/schedule"
-              className="rounded-full bg-green px-5 py-2.5 font-display text-lg font-bold text-white no-underline transition-transform duration-200 hover:-translate-y-0.5 hover:bg-green-dark"
+              className="rounded-full bg-green px-6 py-2.5 font-display text-lg font-bold text-white no-underline transition-transform duration-200 hover:-translate-y-0.5 hover:bg-green-dark"
             >
               See the schedule
             </Link>
-            <a
-              href={PHONE_HREF}
-              className="rounded-full bg-purple px-5 py-2.5 font-display text-lg font-bold text-white no-underline transition-transform duration-200 hover:-translate-y-0.5"
-            >
-              Call to join
-            </a>
           </div>
         </div>
       ) : null}

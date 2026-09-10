@@ -1,5 +1,5 @@
 import type { YogaClass } from "@/lib/classes";
-import { MAPS_HREF, PHONE_DISPLAY, PHONE_HREF } from "@/lib/site";
+import { MAPS_HREF, PHONE_HREF } from "@/lib/site";
 
 export function ClassCard({ yogaClass }: { yogaClass: YogaClass }) {
   return (
@@ -27,16 +27,9 @@ export function ClassCard({ yogaClass }: { yogaClass: YogaClass }) {
           {yogaClass.address}
         </a>
       </p>
-      <p className="mt-6 text-base text-ink/70">
-        Save a spot by calling or texting{" "}
-        <a href={PHONE_HREF} className="font-bold text-purple no-underline hover:underline">
-          {PHONE_DISPLAY}
-        </a>
-        .
-      </p>
       <a
         href={PHONE_HREF}
-        className="mt-5 inline-flex rounded-full bg-purple px-5 py-2.5 font-display text-lg font-bold text-white no-underline transition-transform duration-200 hover:-translate-y-0.5"
+        className="mt-6 inline-flex rounded-full bg-purple px-5 py-2.5 font-display text-lg font-bold text-white no-underline transition-transform duration-200 hover:-translate-y-0.5"
       >
         Call to join
       </a>

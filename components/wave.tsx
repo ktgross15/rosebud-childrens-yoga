@@ -2,7 +2,7 @@ export function Wave({ className = "" }: { className?: string }) {
   return (
     <svg
       className={className}
-      viewBox="0 0 220 60"
+      viewBox="-6 -6 232 72"
       xmlns="http://www.w3.org/2000/svg"
       aria-hidden="true"
     >
