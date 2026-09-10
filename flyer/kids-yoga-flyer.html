@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Kids Yoga Flyer</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;700;800&family=Nunito:wght@400;600;700&display=swap');
+
+  :root{
+    --cream:#FBF0E8;
+    --purple:#7C6FE0;
+    --green:#8FB88A;
+    --green-dark:#4F7A56;
+    --dot-green:#9CC28C;
+    --ink:#2B2B2B;
+  }
+
+  *{box-sizing:border-box;}
+
+  body{
+    margin:0;
+    display:flex;
+    justify-content:center;
+    padding:40px 20px;
+    background:#e7e2da;
+    font-family:'Nunito', sans-serif;
+  }
+
+  /* ===== EDIT ME: change page size here (currently ~5x7 flyer) ===== */
+  .flyer{
+    width:750px;
+    min-height:1060px;
+    background:var(--cream);
+    border-radius:20px;
+    position:relative;
+    overflow:hidden;
+    padding:50px 55px;
+  }
+
+  /* corner dot patterns */
+  .dots{
+    position:absolute;
+    display:grid;
+    grid-template-columns:repeat(5,14px);
+    gap:12px;
+  }
+  .dots span{
+    width:10px;height:10px;border-radius:50%;
+    background:var(--dot-green);
+  }
+  .dots.top-left{top:30px;left:30px;}
+  .dots.bottom-right{bottom:30px;right:30px;}
+
+  /* wavy line accents */
+  .wave{
+    position:absolute;
+    height:60px;
+  }
+  .wave.bottom-left{bottom:120px; left:0px; width:220px;}
+
+  .content{
+    position:relative;
+    z-index:2;
+  }
+
+  /* ===== EDIT ME: title bubble ===== */
+  .title-bubble{
+    background:var(--purple);
+    color:white;
+    display:inline-block;
+    padding:22px 45px;
+    border-radius:60% 40% 55% 45% / 55% 45% 55% 45%;
+    margin-top:10px;
+    margin-left:60px;
+  }
+  .title-bubble h1{
+    margin:0;
+    font-family:'Baloo 2', sans-serif;
+    font-weight:800;
+    font-size:52px;
+    letter-spacing:1px;
+    white-space:nowrap;
+  }
+
+  /* ===== EDIT ME: green info pills ===== */
+  .pill{
+    background:var(--green);
+    color:white;
+    font-family:'Baloo 2', sans-serif;
+    font-weight:600;
+    font-size:24px;
+    text-align:center;
+    line-height:1.3;
+    border-radius:22px;
+    padding:16px 30px;
+    display:inline-block;
+    margin:14px 0 0 60px;
+  }
+
+  .free-lesson{
+    font-family:'Baloo 2', sans-serif;
+    font-weight:700;
+    font-size:24px;
+    color:var(--ink);
+    text-align:right;
+    margin:40px 40px 0 0;
+  }
+
+  .art-area{
+    margin-top:8px;
+    height:420px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    overflow:hidden;
+  }
+  .art-area img{
+    width:100%;
+    height:100%;
+    object-fit:contain;
+    object-position:center 60%;
+    display:block;
+  }
+
+  .footer{
+    margin-top:35px;
+    text-align:center;
+    font-family:'Baloo 2', sans-serif;
+    font-weight:700;
+    font-size:22px;
+    color:var(--ink);
+    line-height:1.5;
+  }
+</style>
+</head>
+<body>
+
+<div class="flyer">
+
+  <!-- corner decorations -->
+  <div class="dots top-left">
+    <span></span><span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span><span></span>
+  </div>
+  <div class="dots bottom-right">
+    <span></span><span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span><span></span>
+  </div>
+
+  <!-- wavy line accent -->
+  <svg class="wave bottom-left" viewBox="0 0 220 60" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0 30 C 20 0, 40 60, 60 30 S 100 0, 120 30 S 160 60, 180 30 S 210 0, 220 30" stroke="#7C6FE0" stroke-width="10" fill="none" stroke-linecap="round"/>
+  </svg>
+
+  <div class="content">
+    <!-- EDIT: class name -->
+    <div class="title-bubble">
+      <h1>KIDS YOGA</h1>
+    </div>
+
+    <div>
+      <!-- level -->
+      <div class="pill">Ages 2-5</div>
+    </div>
+    <div>
+      <!-- schedule -->
+      <div class="pill">Sept 19 10-10:45am<br>Pacific Park<br>645 Dean St, Brooklyn, NY</div>
+    </div>
+
+
+    <div class="art-area">
+      <img src="kids-yoga-illustration.png" alt="A child sitting cross-legged on a yoga mat outdoors">
+    </div>
+
+    <!-- contact info -->
+    <div class="footer">
+      To sign up:<br>
+      Contact Katie Gross at<br>
+      203-247-8217
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>

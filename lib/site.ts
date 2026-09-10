@@ -1,0 +1,9 @@
+export const SITE_NAME = "Rosebud Children's Yoga";
+export const CONTACT_NAME = "Katie Gross";
+export const PHONE_DISPLAY = "203-247-8217";
+export const PHONE_HREF = "tel:+12032478217";
+export const LOCATION_NAME = "Pacific Park";
+export const LOCATION_ADDRESS = "645 Dean St, Brooklyn, NY";
+export const MAPS_HREF =
+  "https://maps.google.com/?q=645+Dean+St,+Brooklyn,+NY";
+export const AGES = "Ages 2–5";

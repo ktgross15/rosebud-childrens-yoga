@@ -1,0 +1,18 @@
+export function RosebudMark({ className = "" }: { className?: string }) {
+  return (
+    <svg
+      className={className}
+      viewBox="0 0 48 48"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      aria-hidden="true"
+    >
+      <ellipse cx="16" cy="34" rx="7" ry="10" fill="#8FB88A" transform="rotate(-28 16 34)" />
+      <ellipse cx="30" cy="35" rx="6.5" ry="9" fill="#4F7A56" transform="rotate(24 30 35)" />
+      <circle cx="24" cy="20" r="11" fill="#E07A7A" />
+      <circle cx="18" cy="18" r="7.5" fill="#F09999" />
+      <circle cx="26" cy="15" r="6" fill="#D45D5D" />
+      <circle cx="24" cy="21" r="3.2" fill="#FBF0E8" />
+    </svg>
+  );
+}
