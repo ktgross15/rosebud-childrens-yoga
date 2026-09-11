@@ -18,13 +18,14 @@ const nunito = Nunito({
   weight: ["400", "600", "700"],
 });
 
+const TITLE = `Kids Yoga in Brooklyn · ${SITE_NAME}`;
 const DESCRIPTION =
-  "Gentle outdoor yoga for ages 2–5 at Pacific Park in Brooklyn. Saturday morning classes, first-timers welcome, taught by a certified Special Education Teacher and Registered Yoga Teacher.";
+  "Gentle outdoor kids yoga for ages 2–5 at Pacific Park in Prospect Heights, Brooklyn. Saturday morning classes, first-timers welcome, taught by a certified Special Education Teacher and Registered Yoga Teacher.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: `${SITE_NAME} · Toddler & Preschool Yoga in Brooklyn`,
+    default: TITLE,
     template: `%s · ${SITE_NAME}`,
   },
   description: DESCRIPTION,
@@ -37,12 +38,12 @@ export const metadata: Metadata = {
     siteName: SITE_NAME,
     locale: "en_US",
     url: SITE_URL,
-    title: `${SITE_NAME} · Toddler & Preschool Yoga in Brooklyn`,
+    title: TITLE,
     description: DESCRIPTION,
   },
   twitter: {
     card: "summary_large_image",
-    title: `${SITE_NAME} · Toddler & Preschool Yoga in Brooklyn`,
+    title: TITLE,
     description: DESCRIPTION,
   },
   robots: {

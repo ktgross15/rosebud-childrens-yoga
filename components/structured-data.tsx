@@ -29,15 +29,36 @@ const place = {
 export function StructuredData() {
   const graph = [
     {
-      "@type": "LocalBusiness",
+      "@type": ["LocalBusiness", "SportsActivityLocation"],
       "@id": `${SITE_URL}/#business`,
       name: SITE_NAME,
+      alternateName: `${SITE_NAME} Brooklyn`,
       url: SITE_URL,
       email: EMAIL,
-      description: `Outdoor yoga classes for ${AGES.toLowerCase()} at ${LOCATION_NAME} in Brooklyn.`,
+      description: `Outdoor kids yoga classes for ${AGES.toLowerCase()} at ${LOCATION_NAME} in Prospect Heights, Brooklyn.`,
       image: `${SITE_URL}/opengraph-image.png`,
+      logo: `${SITE_URL}/icon.svg`,
       address: place.address,
-      areaServed: "Brooklyn, NY",
+      areaServed: [
+        "Prospect Heights, Brooklyn, NY",
+        "Park Slope, Brooklyn, NY",
+        "Fort Greene, Brooklyn, NY",
+        "Clinton Hill, Brooklyn, NY",
+        "Boerum Hill, Brooklyn, NY",
+      ],
+      knowsAbout: [
+        "kids yoga",
+        "toddler yoga",
+        "preschool yoga",
+        "children's mindfulness",
+      ],
+      priceRange: "$$",
+      openingHoursSpecification: {
+        "@type": "OpeningHoursSpecification",
+        dayOfWeek: "https://schema.org/Saturday",
+        opens: "10:30",
+        closes: "11:00",
+      },
     },
     ...classes.map((yogaClass) => ({
       "@type": "Event",

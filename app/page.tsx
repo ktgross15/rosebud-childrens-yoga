@@ -25,9 +25,9 @@ export default function Home() {
         Little bodies, big stretches, and a grassy park morning.
       </p>
       <p className="reveal reveal-delay-2 mt-3 max-w-md px-1 text-lg leading-relaxed text-ink/75">
-        Gentle, playful yoga for {AGES.toLowerCase()} at Pacific Park in
-        Brooklyn. First-timers are welcome! Just bring comfy clothes and a towel
-        or mat.
+        Gentle, playful kids yoga for {AGES.toLowerCase()} at Pacific Park in
+        Prospect Heights, Brooklyn. First-timers are welcome! Just bring comfy
+        clothes and a towel or mat.
       </p>
 
           <div className="hero-art reveal reveal-delay-3 relative z-0 -mt-2 w-full max-w-xl">

@@ -4,7 +4,7 @@ import { DotGrid } from "@/components/dot-grid";
 import { getUpcomingClasses } from "@/lib/classes";
 
 export const metadata: Metadata = {
-  title: "Schedule",
+  title: "Kids Yoga Class Schedule",
   description:
     "Upcoming Rosebud Yogis classes for ages 2–5 at Pacific Park in Brooklyn. Saturday mornings, 10:30–11am.",
   alternates: { canonical: "/schedule" },
@@ -21,8 +21,8 @@ export default function SchedulePage() {
         Schedule
       </h1>
       <p className="reveal reveal-delay-1 mt-3 max-w-lg text-lg leading-relaxed text-pretty text-ink/75">
-        Outdoor classes on Saturday mornings. Same cozy 30-minute class, two
-        dates to choose from.
+        Outdoor kids yoga on Saturday mornings at Pacific Park in Brooklyn. Same
+        cozy 30-minute class, two dates to choose from.
       </p>
 
       {upcoming.length > 0 ? (
