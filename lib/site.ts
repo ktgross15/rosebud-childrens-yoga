@@ -1,4 +1,5 @@
 export const SITE_NAME = "Rosebud Yogis";
+export const SITE_URL = "https://rosebudyogis.com";
 export const EMAIL = "hello@rosebudyogis.com";
 export const EMAIL_HREF = "mailto:hello@rosebudyogis.com";
 export const LOCATION_NAME = "Pacific Park";
@@ -6,3 +7,4 @@ export const LOCATION_ADDRESS = "615 Dean St, Brooklyn, NY";
 export const MAPS_HREF =
   "https://maps.google.com/?q=615+Dean+St,+Brooklyn,+NY";
 export const AGES = "Ages 2–5";
+export const DONATION = "Suggested donation $10–$20";

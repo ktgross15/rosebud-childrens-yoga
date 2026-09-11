@@ -6,7 +6,8 @@ import { getUpcomingClasses } from "@/lib/classes";
 export const metadata: Metadata = {
   title: "Schedule",
   description:
-    "Upcoming Rosebud Yogis classes for ages 2–5 at Pacific Park in Brooklyn.",
+    "Upcoming Rosebud Yogis classes for ages 2–5 at Pacific Park in Brooklyn. Saturday mornings, 10:30–11am.",
+  alternates: { canonical: "/schedule" },
 };
 
 export default function SchedulePage() {

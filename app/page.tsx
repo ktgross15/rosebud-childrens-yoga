@@ -3,7 +3,7 @@ import Link from "next/link";
 import { DotGrid } from "@/components/dot-grid";
 import { Wave } from "@/components/wave";
 import { getNextClass } from "@/lib/classes";
-import { AGES } from "@/lib/site";
+import { AGES, DONATION } from "@/lib/site";
 
 export default function Home() {
   const nextClass = getNextClass();
@@ -17,7 +17,7 @@ export default function Home() {
 
       <div className="title-blob reveal">
         <h1 className="max-w-[16rem] font-display text-[1.65rem] font-extrabold leading-[1.05] tracking-wide text-balance sm:max-w-none sm:text-5xl sm:leading-none">
-          Yoga in the Park
+          Pacific Park Yoga
         </h1>
       </div>
 
@@ -26,8 +26,8 @@ export default function Home() {
       </p>
       <p className="reveal reveal-delay-2 mt-3 max-w-md px-1 text-lg leading-relaxed text-ink/75">
         Gentle, playful yoga for {AGES.toLowerCase()} at Pacific Park in
-        Brooklyn. First-timers are welcome! Just bring comfy clothes and a
-        grown-up.
+        Brooklyn. First-timers are welcome! Just bring comfy clothes and a towel
+        or mat.
       </p>
 
           <div className="hero-art reveal reveal-delay-3 relative z-0 -mt-2 w-full max-w-xl">
@@ -51,6 +51,7 @@ export default function Home() {
             <span className="pill">{nextClass.ages}</span>
             <span className="pill">{nextClass.location}</span>
           </div>
+          <p className="text-base text-ink/60">{DONATION}</p>
           <div className="mt-2 flex w-full justify-center">
             <Link
               href="/schedule"

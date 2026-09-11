@@ -1,5 +1,5 @@
 import type { YogaClass } from "@/lib/classes";
-import { EMAIL_HREF, MAPS_HREF } from "@/lib/site";
+import { DONATION, EMAIL_HREF, MAPS_HREF } from "@/lib/site";
 
 export function ClassCard({ yogaClass }: { yogaClass: YogaClass }) {
   return (
@@ -27,6 +27,7 @@ export function ClassCard({ yogaClass }: { yogaClass: YogaClass }) {
           {yogaClass.address}
         </a>
       </p>
+      <p className="mt-3 text-base text-ink/60">{DONATION}</p>
       <a
         href={EMAIL_HREF}
         className="mt-6 inline-flex rounded-full bg-purple px-5 py-2.5 font-display text-lg font-bold text-white no-underline transition-transform duration-200 hover:-translate-y-0.5"
