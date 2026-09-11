@@ -1,4 +1,4 @@
-# Rosebud Children's Yoga
+# Rosebud Yogis
 
 A small Next.js site for outdoor kids yoga in Brooklyn: homepage + schedule.
 

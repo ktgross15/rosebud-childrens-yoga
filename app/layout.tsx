@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     template: `%s · ${SITE_NAME}`,
   },
   description:
-    "Playful outdoor yoga for ages 2–5 in Brooklyn. Join Rosebud Children's Yoga at Pacific Park.",
+    "Playful outdoor yoga for ages 2–5 in Brooklyn. Join Rosebud Yogis at Pacific Park.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
