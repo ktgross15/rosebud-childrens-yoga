@@ -8,6 +8,7 @@ import { SITE_NAME } from "@/lib/site";
 const links = [
   { href: "/", label: "Home" },
   { href: "/schedule", label: "Schedule" },
+  { href: "/about", label: "About" },
 ];
 
 export function SiteHeader() {
